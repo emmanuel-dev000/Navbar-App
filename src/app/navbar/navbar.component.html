@@ -1,0 +1,24 @@
+@if(isShowPhoneNavbar) {
+    <nav class="navbar">
+        <a routerLink="/" (click)="hidePhoneNavbar()">
+            <img src="donut.svg" alt="logo">
+        </a>
+        <span>
+            <a routerLink="/" (click)="hidePhoneNavbar()" class="nav-link">Home</a>
+        </span>
+        <span>
+            <a routerLink="/about" (click)="hidePhoneNavbar()" class="nav-link">About</a>
+        </span>
+        <span>
+            <a routerLink="/contacts" (click)="hidePhoneNavbar()" class="nav-link">Contacts</a>
+        </span>
+    </nav>
+}
+
+@else {
+    <nav class="navbar">
+        <button class="navbar-burger" type="menu" (click)="showPhoneNavbar()">
+            <img style="width: 50px; height: 50px;" src="burger.svg" alt="menu">
+        </button>
+    </nav>
+}
